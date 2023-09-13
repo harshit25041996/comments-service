@@ -34,7 +34,7 @@ public class CommentService {
     public Comment update(Long id, Comment comment) {
         Comment comment1 = commentRepository.findById(id).get();
         comment1.setContent(comment.getContent());
-        return commentRepository.save(comment);
+        return commentRepository.save(comment1);
     }
 
     public void deleteById(Long id) {
